@@ -1,6 +1,6 @@
 {
   "name": "@chumano/my-sample-package",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A sample npm package for demonstration",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,6 +9,7 @@
     "test": "jest",
     "prepublishOnly": "npm run build",
     "dev": "tsc --watch",
+    "publish": "npm publish --access public",
     "version:patch": "node scripts/version.js patch",
     "version:minor": "node scripts/version.js minor",
     "version:major": "node scripts/version.js major",
@@ -24,7 +25,7 @@
     "package",
     "demo"
   ],
-  "author": "chumano <xuanloc_hoang2000@yahoo.com>",
+  "author": "chumano",
   "license": "MIT",
   "repository": {
     "type": "git",

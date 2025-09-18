@@ -139,7 +139,8 @@ try {
             git tag "v$newVersion"
             Write-Success "✅ Created git commit and tag: v$newVersion"
             Write-Info "📝 To push changes and tags, run:"
-            Write-Info "   git push && git push --tags"
+            Write-Info "   git push"
+            Write-Info "   git push --tags"
         } catch {
             Write-Error "❌ Error creating git commit/tag: $_"
         }

@@ -22,7 +22,7 @@ export function add(a: number, b: number): number {
  * @returns The package version
  */
 export function getVersion(): string {
-  return "1.0.0";
+  return "1.0.2";
 }
 
 // Default export

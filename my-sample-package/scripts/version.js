@@ -267,9 +267,9 @@ function main() {
     const indexTsPath = path.join(process.cwd(), 'src', 'index.ts');
     if (fs.existsSync(indexTsPath)) {
       let content = fs.readFileSync(indexTsPath, 'utf8');
-      const versionRegex = /return ["'][\d\.]+([-\w\.]*)?["'];.*getVersion/;
+      const versionRegex = /return\s+["'][\d\.]+([-\w\.]*)?["'];/;
       if (versionRegex.test(content)) {
-        content = content.replace(versionRegex, `return "${newVersion}"; // getVersion`);
+        content = content.replace(versionRegex, `return "${newVersion}";`);
         fs.writeFileSync(indexTsPath, content);
         colorLog('green', '✅ Updated version in src/index.ts');
       }

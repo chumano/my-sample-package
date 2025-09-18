@@ -1,6 +1,6 @@
 {
   "name": "@chumano/my-sample-package",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A sample npm package for demonstration",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

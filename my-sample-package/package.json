@@ -1,0 +1,51 @@
+{
+  "name": "@chumano/my-sample-package",
+  "version": "1.0.0",
+  "description": "A sample npm package for demonstration",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "dev": "tsc --watch",
+    "version:patch": "node scripts/version.js patch",
+    "version:minor": "node scripts/version.js minor",
+    "version:major": "node scripts/version.js major",
+    "version:current": "node scripts/version.js current",
+    "version:help": "node scripts/version.js help",
+    "release:patch": "npm run test && npm run build && npm run version:patch && npm publish",
+    "release:minor": "npm run test && npm run build && npm run version:minor && npm publish",
+    "release:major": "npm run test && npm run build && npm run version:major && npm publish"
+  },
+  "keywords": [
+    "sample",
+    "npm",
+    "package",
+    "demo"
+  ],
+  "author": "chumano <xuanloc_hoang2000@yahoo.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chumano/my-sample-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chumano/my-sample-package/issues"
+  },
+  "homepage": "https://github.com/chumano/my-sample-package#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^18.19.127",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.2",
+    "typescript": "^5.9.2"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}
